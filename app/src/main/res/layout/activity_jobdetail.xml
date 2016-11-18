@@ -462,9 +462,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="@dimen/dimen_20_dip"
                 android:gravity="center"
                 android:layout_weight="1"
+                android:padding="@dimen/dimen_18_dip"
                 android:layout_marginRight="@dimen/dimen_20_dip"
                 android:background="@drawable/btn_jobinfo_apply2">
                 <TextView
@@ -479,7 +479,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="@dimen/dimen_20_dip"
+                android:padding="@dimen/dimen_18_dip"
                 android:gravity="center"
                 android:layout_weight="1"
                 android:layout_marginRight="@dimen/dimen_20_dip"
@@ -494,6 +494,7 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/btn_enroll_submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"

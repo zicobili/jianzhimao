@@ -3,10 +3,13 @@ package com.example.administrator.jianzhimao;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{
     private RadioGroup rg_tab_bar;
@@ -17,10 +20,41 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private FragmentMiao fg3;
     private FragmentMe fg4;
     private FragmentManager fManager;
+
+    private long temptime = 0;
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)//主要是对这个函数的复写
+    {
+        // TODO Auto-generated method stub
+
+        if((keyCode == KeyEvent.KEYCODE_BACK)&&(event.getAction() == KeyEvent.ACTION_DOWN))
+        {
+            if(System.currentTimeMillis() - temptime >2000) // 2s内再次选择back键有效
+            {
+                System.out.println(Toast.LENGTH_LONG);
+                Toast.makeText(this, "请在按一次返回退出", Toast.LENGTH_LONG).show();
+                temptime = System.currentTimeMillis();
+            }
+            else {
+                finish();
+                System.exit(0); //凡是非零都表示异常退出!0表示正常退出!
+            }
+
+            return true;
+
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        overridePendingTransition(R.anim.in_right, R.anim.out_left);
         fManager = getFragmentManager();
         rg_tab_bar = (RadioGroup) findViewById(R.id.rg);
         rg_tab_bar.setOnCheckedChangeListener(this);

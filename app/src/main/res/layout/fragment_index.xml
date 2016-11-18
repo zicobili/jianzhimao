@@ -15,8 +15,13 @@
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_300_dip"
-                android:background="#999999"></LinearLayout>
+                android:layout_height="@dimen/dimen_350_dip"
+                android:background="#999999">
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></com.youth.banner.Banner>
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,7 +49,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="精岗专享"
                                 android:textColor="#555555"
-                                android:textAppearance="@style/TextAppearance.AppCompat" />
+                                android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -61,6 +66,10 @@
                             android:src="@mipmap/vip"/>
                     </LinearLayout>
                 </RelativeLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/deafault_Activity_bg" />
                 <RelativeLayout
                     android:id="@+id/miao_mission"
                     android:layout_width="0dp"
@@ -75,13 +84,14 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_20_dip"
                             android:orientation="vertical">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="喵任务"
                                 android:textColor="#555555"
-                                android:textAppearance="@style/TextAppearance.AppCompat" />
+                                android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -104,6 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dimen_20_dip"
+                android:layout_marginTop="1dp"
                 android:background="#ffffff"
                 android:orientation="horizontal">
                 <RelativeLayout
@@ -126,11 +137,11 @@
                                 android:layout_height="wrap_content"
                                 android:text="附近兼职"
                                 android:textColor="#555555"
-                                android:textAppearance="@style/TextAppearance.AppCompat" />
+                                android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="就挑离家最近的等待"
+                                android:text="就挑你不用走远的"
                                 android:minEms="8"
                                 android:layout_marginTop="@dimen/dimen_10_dip"
                                 android:textColor="#999999"
@@ -143,6 +154,10 @@
                             android:src="@mipmap/map"/>
                     </LinearLayout>
                 </RelativeLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/deafault_Activity_bg" />
                 <RelativeLayout
                     android:id="@+id/parttime_trip"
                     android:layout_width="0dp"
@@ -158,6 +173,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_20_dip"
                             android:orientation="vertical">
                             <TextView
                                 android:layout_width="wrap_content"

@@ -33,10 +33,12 @@
                 android:textColor="#555555"
                 android:textAppearance="?android:attr/textAppearance"/>
             <EditText
+                android:id="@+id/account"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceInverse"
-                android:text="手机号码"
+                android:hint="手机号码"
+                android:textColorHint="#999999"
                 android:textColor="#999999"
                 android:layout_marginLeft="@dimen/dimen_50_dip"
                 android:background="@null"/>
@@ -59,15 +61,18 @@
                 android:text="密码"
                 android:textAppearance="?android:attr/textAppearance"/>
             <EditText
+                android:id="@+id/password"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="#999999"
                 android:textAppearance="?android:attr/textAppearanceInverse"
-                android:text="6-20位数字或字母"
+                android:hint="6-20位数字或字母"
+                android:textColorHint="#999999"
                 android:layout_marginLeft="@dimen/dimen_50_dip"
                 android:background="@null"/>
             <TextView
+                android:id="@+id/restpassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="忘记密码？"
@@ -88,6 +93,7 @@
         android:layout_marginTop="@dimen/dimen_30_dip"
         android:layout_below="@+id/editview"/>
     <TextView
+        android:id="@+id/login2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="动态密码登录"
@@ -105,6 +111,7 @@
         android:layout_marginBottom="@dimen/dimen_30_dip"
         android:layout_alignParentBottom="true">
         <TextView
+            android:id="@+id/reg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="注册帐号"
@@ -119,6 +126,7 @@
             android:textColor="#ffffff"
             android:textAppearance="?android:attr/textAppearanceSmall"/>
         <TextView
+            android:id="@+id/skiplogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="随便看看"
